@@ -5,6 +5,22 @@
  * @return {string} reversed
  * ie: "cat" => "tac"
  */
+var firstReverse = function(str){
+    // console.log(str)
+    if(typeof str==='string'){
+    var splitter = str.split("");
+    // console.log(splitter);
+    var rev = splitter.reverse();
+    var final = rev.join("");
+    
+        // console.log('hi')
+        return final
+        
+    }
+    return null;
+    
+    
+}
 
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
@@ -13,6 +29,17 @@
  * @return {string} in alphabetical order
  * ie: "cake" => "acek"
  */
+var alphaOrder = function(str){
+    // console.log(str)
+    if(typeof str ==='string'){
+        var arr = str.split('')
+        var arrSort = arr.sort();
+        var final = arrSort.join('');
+        return final;
+    }else{
+        return null;
+    }
+}
 
  /** Function: vowelCount
  * The function will take the num parameter being passed in and
@@ -56,8 +83,8 @@
  */
 
 module.exports = {
-    firstReverse: null,
-    alphaOrder: null,
+    firstReverse: firstReverse,
+    alphaOrder: alphaOrder,
     vowelCount: null,
     timeConvert: null,
     repeatString: null

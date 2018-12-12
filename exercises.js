@@ -72,7 +72,22 @@ var vowelCount = function(str){
  * @param {number} str
  * @return {string} as hours:minutes
  * ie: 68 => 1:8
- */
+ */ 
+var timeConvert = function(num){
+    // console.log(num)
+    if(typeof num === 'number'){
+        var arr =[];
+        var hours = Math.trunc(num/60);
+        arr.push(hours);
+        var minutes = num % 60 ;
+        arr.push(minutes);
+       var final =  arr.join(':')
+        return final;
+    }else{
+        return null;
+    }
+}
+
 
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
@@ -102,6 +117,6 @@ module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
-    timeConvert: null,
+    timeConvert: timeConvert,
     repeatString: null
 }

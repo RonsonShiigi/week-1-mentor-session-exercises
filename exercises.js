@@ -97,6 +97,16 @@ var timeConvert = function(num){
  * @return {string} repeated num times
  * i.e repeatString("money", 3) => "moneymoneymoney".
  */
+var repeatString = function(str,num){
+    console.log(str)
+    console.log(num)
+    if(typeof str === 'string' && typeof num === 'number'){
+        var newStr = str.repeat(num)
+        return newStr;
+    }else{
+        return null;
+    }
+}
 
 
 /**
@@ -118,5 +128,5 @@ module.exports = {
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
     timeConvert: timeConvert,
-    repeatString: null
+    repeatString: repeatString,
 }
